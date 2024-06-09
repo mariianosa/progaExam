@@ -109,9 +109,25 @@ namespace Program.Tests
             Assert.Equal(130, brigadeDevicesCosts.First(b => b.Brigade.brygadaName == "Brigade A").TotalCost);
             Assert.Equal(20, brigadeDevicesCosts.First(b => b.Brigade.brygadaName == "Brigade B").TotalCost);
 
+            
 
 
 
+
+        }
+        [Fact]
+        public void TestReadNaryadXml()
+        {
+            // Arrange
+            var expectedCount = 3; 
+
+            // Act
+            var naryad1Count = fixture.naryad1Data.Count();
+            var naryad2Count = fixture.naryad2Data.Count();
+
+            // Assert
+            Assert.Equal(expectedCount, naryad1Count);
+            Assert.Equal(expectedCount, naryad2Count);
         }
     }
 }

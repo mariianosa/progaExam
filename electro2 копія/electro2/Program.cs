@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Intrinsics.Arm;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 using electro2;
@@ -40,17 +41,17 @@ namespace Program
 
 
 
-                XDocument Naryad1 = XDocument.Load(@"/Users/marianosa/Projects/electro2/electro2/naryad.xml");
-                var naryad1Data = from n in Naryad1.Descendants("Naryad")
-                                  select new
-                                  {
-                                      workerId = int.Parse(n.Element("workerId").Value),
-                                      hours = int.Parse(n.Element("hours").Value),
-                                      deviceId = int.Parse(n.Element("deviceId").Value),
-                                      countEkzemp = int.Parse(n.Element("countEkzemp").Value)
+            XDocument Naryad1 = XDocument.Load(@"/Users/marianosa/Projects/electro2/electro2/naryad.xml");
+            var naryad1Data = from n in Naryad1.Descendants("Naryad")
+                              select new
+                              {
+                                  workerId = int.Parse(n.Element("workerId").Value),
+                                  hours = int.Parse(n.Element("hours").Value),
+                                  deviceId = int.Parse(n.Element("deviceId").Value),
+                                  countEkzemp = int.Parse(n.Element("countEkzemp").Value)
 
-                                  };
-            
+                              };
+
 
             XDocument Naryad2 = XDocument.Load(@"/Users/marianosa/Projects/electro2/electro2/naryad2.xml");
             var naryad2Data = from n in Naryad2.Descendants("Naryad")
@@ -60,40 +61,26 @@ namespace Program
                                   hours = int.Parse(n.Element("hours").Value),
                                   deviceId = int.Parse(n.Element("deviceId").Value),
                                   countEkzemp = int.Parse(n.Element("countEkzemp").Value)
-
-
                               };
 
-            //хті - файл, де для кожної бригади пораховано сумарну вартість пристроїв, встановлених її пра-цівниками;
+            var naryad = naryad1Data.ToList().Concat(naryad2Data.ToList());
+            //хml - файл, де для кожної бригади пораховано сумарну вартість пристроїв, встановлених її працівниками;
             //переліки впорядкувати за назвою бригад у лексико - графічному порядку:
-            var brigadeDevicesCosts = from b in brygadas
-                                      join w in workers on b.brygadaId equals w.brygadaId
-                                      join n1 in naryad1Data on w.workerId equals n1.workerId into n1Group
-                                      join n2 in naryad2Data on w.workerId equals n2.workerId into n2Group
-                                      let devicesCost1 = n1Group.Sum(n => devices.First(d => d.deviceId == n.deviceId).devicePrice * n.countEkzemp)
-                                      let devicesCost2 = n2Group.Sum(n => devices.First(d => d.deviceId == n.deviceId).devicePrice * n.countEkzemp)
-                                      orderby b.brygadaName // Впорядкування за назвою бригади
-                                      select new
-                                      {
-                                          Brigade = b,
-                                          TotalCost = devicesCost1 + devicesCost2
-                                      }
-                                      into result
-                                      group result by result.Brigade into g
-                                      select new
-                                      {
-                                          Brigade = g.Key,
-                                          TotalCost = g.Sum(x => x.TotalCost)
-                                      };
-
+            var brigadeDevicesCosts = from brygada in brygadas
+                                      join worker in workers on brygada.brygadaId equals worker.brygadaId
+                                      join n in naryad on worker.workerId equals n.workerId
+                                      join device in devices on n.deviceId equals device.deviceId
+                                      group device.devicePrice * n.countEkzemp by brygada into grouped
+                                      orderby grouped.Key.brygadaName
+                                      select new { totalPrice = grouped.Sum(), brigadeName = grouped.Key.brygadaName };
 
 
 
             XElement resultXml = new XElement("Brigades",
-                from brigadeCost in brigadeDevicesCosts.OrderBy(bc => bc.Brigade.brygadaName)
+                from brigadeCost in brigadeDevicesCosts
                 select new XElement("Brigade",
-                    new XElement("Name", brigadeCost.Brigade.brygadaName),
-                    new XElement("TotalCost", brigadeCost.TotalCost)
+                    new XElement("Name", brigadeCost.brigadeName),
+                    new XElement("TotalCost", brigadeCost.totalPrice)
                 )
             );
 
@@ -102,29 +89,28 @@ namespace Program
 
 
 
-            //(б)хті - файл, де для кожного працівника подано зароблені ним кошти і перелік встановлених пристроїв із вказанням їхньої кількості;
+            //(б)хml - файл, де для кожного працівника подано зароблені ним кошти і перелік встановлених пристроїв із вказанням їхньої кількості;
             //впорядкувати за прізвищем у лексико - графічному порядку та за спаданням кількості.
             var workerEarningsAndDevices = from worker in workers
-                                           let earnings = (from naryad in naryad1Data.Concat(naryad2Data)
-                                                           where naryad.workerId == worker.workerId
-                                                           select naryad.hours).Sum() * tariffs.First(t => t.tariffId == worker.tafiffId).hourlyRate
-                                           let workerDevices = from naryad in naryad1Data.Concat(naryad2Data)
-                                                               where naryad.workerId == worker.workerId
-                                                               group naryad by naryad.deviceId into deviceGroup
-                                                               select new
-                                                               {
-                                                                   DeviceId = deviceGroup.Key,
-                                                                   Quantity = deviceGroup.Sum(n => n.countEkzemp)
-                                                               }
-                                           orderby worker.workerSurname ascending, workerDevices.Sum(d => d.Quantity) descending
+                                           join n in naryad on worker.workerId equals n.workerId
+                                           join device in devices on n.deviceId equals device.deviceId
+                                           group new { n, device } by worker into workerGroup
+                                           let tariff = tariffs.FirstOrDefault(t => t.tariffId == workerGroup.Key.tariffId)
+                                           let earnings = workerGroup.Sum(g => g.n.hours * tariff.hourlyRate)
+                                           let workerDevices = workerGroup.GroupBy(g => g.device)
+                                                                          .Select(g => new
+                                                                          {
+                                                                              DeviceId = g.Key.deviceId,
+                                                                              DeviceName = g.Key.deviceName,
+                                                                              Quantity = g.Sum(x => x.n.countEkzemp)
+                                                                          })
+                                           orderby workerGroup.Key.workerSurname ascending, workerDevices.Sum(d => d.Quantity) descending
                                            select new
                                            {
-                                               Worker = worker,
+                                               Worker = workerGroup.Key,
                                                Earnings = earnings,
                                                Devices = workerDevices
                                            };
-
-
             XElement resultXml2 = new XElement("Workers",
                 from workerData in workerEarningsAndDevices
                 select new XElement("Worker",
@@ -134,11 +120,15 @@ namespace Program
                         from device in workerData.Devices
                         select new XElement("Device",
                             new XAttribute("Id", device.DeviceId),
+                            new XAttribute("Name", device.DeviceName),
                             new XAttribute("Quantity", device.Quantity)
                         )
                     )
                 )
             );
+
+
+
 
             resultXml2.Save("/Users/marianosa/Projects/electro2/electro2/WorkerEarnigsAndDevices.xml");
 

@@ -4,22 +4,22 @@
     <Surname>Berkela</Surname>
     <Earnings>500</Earnings>
     <Devices>
-      <Device Id="111" Quantity="2" />
+      <Device Id="111" Name="Lala" Quantity="2" />
     </Devices>
   </Worker>
   <Worker>
     <Surname>Chichak</Surname>
     <Earnings>5500</Earnings>
     <Devices>
-      <Device Id="111" Quantity="11" />
-      <Device Id="222" Quantity="5" />
+      <Device Id="111" Name="Lala" Quantity="11" />
+      <Device Id="222" Name="Voda" Quantity="5" />
     </Devices>
   </Worker>
   <Worker>
     <Surname>Nosa</Surname>
     <Earnings>5000</Earnings>
     <Devices>
-      <Device Id="222" Quantity="5" />
+      <Device Id="222" Name="Voda" Quantity="5" />
     </Devices>
   </Worker>
 </Workers>

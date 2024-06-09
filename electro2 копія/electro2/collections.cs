@@ -19,14 +19,14 @@ namespace electro2
         {
             public int workerId { get; set; }
             public string workerSurname { get; set; }
-            public int tafiffId { get; set; }
+            public int tariffId { get; set; }
             public int brygadaId { get; set; }
 
-            public Worker(int workerId, string workerSurname, int tafiffId, int brygadaId)
+            public Worker(int workerId, string workerSurname, int tariffId, int brygadaId)
             {
                 this.workerId = workerId;
                 this.workerSurname = workerSurname;
-                this.tafiffId = tafiffId;
+                this.tariffId = tariffId;
                 this.brygadaId = brygadaId;
             }
 
