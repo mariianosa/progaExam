@@ -131,7 +131,67 @@ namespace Program
 
 
             resultXml2.Save("/Users/marianosa/Projects/electro2/electro2/WorkerEarnigsAndDevices.xml");
+//            xml - файл, де для кожної бригади пораховано зароблені кожним працівником кошти;
+//            переліки впорядкувати за назвою бригад і прізвищем працівників у лексико-графічному порядку; при
+//цьому назви бригад подавати без повторень;
+            var brigadeEarningsByWorker = from brygada in brygadas
+                                          from worker in workers
+                                          where worker.brygadaId == brygada.brygadaId
+                                          let tariff = tariffs.FirstOrDefault(t => t.tariffId == worker.tariffId)
+                                          let workerEarnings = (from n in naryad
+                                                                where n.workerId == worker.workerId
+                                                                select n.hours * (tariff?.hourlyRate ?? 0)).Sum()
+                                          group new { Worker = worker, Earnings = workerEarnings } by brygada into grouped
+                                          orderby grouped.Key.brygadaName
+                                          select new XElement("Brigade",
+                                                      new XElement("Name", grouped.Key.brygadaName),
+                                                      from workerData in grouped.OrderBy(w => w.Worker.workerSurname)
+                                                      select new XElement("Worker",
+                                                          new XElement("Surname", workerData.Worker.workerSurname),
+                                                          new XElement("Earnings", workerData.Earnings)
+                                                      )
+                                          );
+
+            // Створення XML-структури та збереження у файл
+            XElement resultXml3 = new XElement("Brigades", brigadeEarningsByWorker);
+            resultXml3.Save("/Users/marianosa/Projects/electro2/electro2/BrigadeEarningsByWorker.xml");
+
+
+
+
+            //для кожної бригади працівник у якого найбільший заробіток
+            var brigadeTopEarners = from brygada in brygadas
+                                    join worker in workers on brygada.brygadaId equals worker.brygadaId
+                                    let workerNaryad = naryad.Where(n => n.workerId == worker.workerId)
+                                    let workerDevices = workerNaryad.Join(devices, n => n.deviceId, d => d.deviceId, (n, d) => new { n.workerId, d.devicePrice, n.countEkzemp })
+                                    let workerEarnings = workerNaryad.Sum(n => n.hours * tariffs.FirstOrDefault(t => t.tariffId == worker.tariffId)?.hourlyRate ?? 0)
+                                    orderby brygada.brygadaName
+                                    group new { Worker = worker, Earnings = workerEarnings } by brygada into grouped
+                                    select new
+                                    {
+                                        BrigadeName = grouped.Key.brygadaName,
+                                        TopEarner = grouped.OrderByDescending(g => g.Earnings).FirstOrDefault()?.Worker
+                                    };
+
+            XElement resultXml4 = new XElement("Brigades",
+                from brigade in brigadeTopEarners
+                select new XElement("Brigade",
+                    new XElement("Name", brigade.BrigadeName),
+                    new XElement("TopEarner",
+                        new XElement("Surname", brigade.TopEarner.workerSurname),
+                        new XElement("Earnings", brigade.TopEarner == null ? 0 : brigade.TopEarner.Earnings)
+                    )
+                )
+            );
+
+
+
+
+
+            resultXml4.Save("/Users/marianosa/Projects/electro2/electro2/BrigadeTopEarners.xml");
 
         }
+
+
     }
-}
+    }

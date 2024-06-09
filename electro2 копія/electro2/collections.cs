@@ -45,22 +45,6 @@ namespace electro2
 
 
         }
-        //public class Naryad
-        //{
-        //    public int workerId { get; set; }
-        //    public int hours { get; set; }
-        //    public int deviceId { get; set; }
-        //    public int countEkzemp { get; set; }
-
-        //    public Naryad(int workerId, int hours, int deviceId, int countEkzemp)
-        //    {
-        //        this.workerId = workerId;
-        //        this.hours = hours;
-        //        this.deviceId = deviceId;
-        //        this.countEkzemp = countEkzemp;
-        //    }
-
-        //}
         public class Device
         {
             public int deviceId { get; set; }

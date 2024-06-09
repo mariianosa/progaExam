@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Brigades>
+  <Brigade>
+    <Name>Brigade A</Name>
+    <Worker>
+      <Surname>Chichak</Surname>
+      <Earnings>5500</Earnings>
+    </Worker>
+    <Worker>
+      <Surname>Nosa</Surname>
+      <Earnings>5000</Earnings>
+    </Worker>
+  </Brigade>
+  <Brigade>
+    <Name>Brigade B</Name>
+    <Worker>
+      <Surname>Berkela</Surname>
+      <Earnings>500</Earnings>
+    </Worker>
+  </Brigade>
+</Brigades>
