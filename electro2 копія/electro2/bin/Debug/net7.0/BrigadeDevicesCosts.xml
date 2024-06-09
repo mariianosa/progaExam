@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Brigades>
+  <Brigade>
+    <Name>Brigade A</Name>
+    <TotalCost>77</TotalCost>
+  </Brigade>
+  <Brigade>
+    <Name>Brigade A</Name>
+    <TotalCost>99</TotalCost>
+  </Brigade>
+</Brigades>

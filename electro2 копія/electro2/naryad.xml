@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Naryads>
+    <Naryad>
+        <workerId>33</workerId>
+        <hours>100</hours>
+        <deviceId>111</deviceId>
+        <countEkzemp>11</countEkzemp>
+    </Naryad>
+
+    <Naryad>
+        <workerId>11</workerId>
+        <hours>50</hours>
+        <deviceId>222</deviceId>
+        <countEkzemp>5</countEkzemp>
+    </Naryad>
+</Naryads>

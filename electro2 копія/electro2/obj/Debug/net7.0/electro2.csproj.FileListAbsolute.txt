@@ -1,0 +1,15 @@
+/Users/marianosa/Projects/electro2/electro2/bin/Debug/net7.0/electro2
+/Users/marianosa/Projects/electro2/electro2/bin/Debug/net7.0/electro2.deps.json
+/Users/marianosa/Projects/electro2/electro2/bin/Debug/net7.0/electro2.runtimeconfig.json
+/Users/marianosa/Projects/electro2/electro2/bin/Debug/net7.0/electro2.dll
+/Users/marianosa/Projects/electro2/electro2/bin/Debug/net7.0/electro2.pdb
+/Users/marianosa/Projects/electro2/electro2/obj/Debug/net7.0/electro2.csproj.AssemblyReference.cache
+/Users/marianosa/Projects/electro2/electro2/obj/Debug/net7.0/electro2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/marianosa/Projects/electro2/electro2/obj/Debug/net7.0/electro2.AssemblyInfoInputs.cache
+/Users/marianosa/Projects/electro2/electro2/obj/Debug/net7.0/electro2.AssemblyInfo.cs
+/Users/marianosa/Projects/electro2/electro2/obj/Debug/net7.0/electro2.csproj.CoreCompileInputs.cache
+/Users/marianosa/Projects/electro2/electro2/obj/Debug/net7.0/electro2.dll
+/Users/marianosa/Projects/electro2/electro2/obj/Debug/net7.0/refint/electro2.dll
+/Users/marianosa/Projects/electro2/electro2/obj/Debug/net7.0/electro2.pdb
+/Users/marianosa/Projects/electro2/electro2/obj/Debug/net7.0/electro2.genruntimeconfig.cache
+/Users/marianosa/Projects/electro2/electro2/obj/Debug/net7.0/ref/electro2.dll
