@@ -1,0 +1,26 @@
+<Licences>
+    <License>
+        <id>1</id>
+        <driverSurname>Gosling</driverSurname>
+        <category>B</category>
+        <expirationDate>2028-02-02</expirationDate>
+    </License>
+    <License>
+        <id>2</id>
+        <driverSurname>Smith</driverSurname>
+        <category>C</category>
+        <expirationDate>2030-02-02</expirationDate>
+    </License>
+    <License>
+        <id>3</id>
+        <driverSurname>Urdeichuk</driverSurname>
+        <category>A</category>
+        <expirationDate>2026-02-02</expirationDate>
+    </License>
+    <License>
+        <id>4</id>
+        <driverSurname>kfjgjkkj</driverSurname>
+        <category>B</category>
+        <expirationDate>2025-02-02</expirationDate>
+    </License>
+</Licences>

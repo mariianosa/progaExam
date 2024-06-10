@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Results>
+  <Result>
+    <driverSurname>Gosling</driverSurname>
+    <category>B</category>
+    <termin>4</termin>
+    <theoryGrade>98</theoryGrade>
+    <practicGrade>65</practicGrade>
+  </Result>
+  <Result>
+    <driverSurname>Smith</driverSurname>
+    <category>C</category>
+    <termin>7</termin>
+    <theoryGrade>70</theoryGrade>
+    <practicGrade>76</practicGrade>
+  </Result>
+  <Result>
+    <driverSurname>Urdeichuk</driverSurname>
+    <category>A</category>
+    <termin>2</termin>
+    <theoryGrade>89</theoryGrade>
+    <practicGrade>88</practicGrade>
+  </Result>
+</Results>

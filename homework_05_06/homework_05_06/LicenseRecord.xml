@@ -1,0 +1,26 @@
+<LicenseRecords>
+<LicenceRecord>
+    <licenseId>1</licenseId>
+    <examDate>2024-02-02</examDate>
+    <theoryId>1</theoryId>
+    <practicId>3</practicId>
+</LicenceRecord>
+    <LicenceRecord>
+        <licenseId>2</licenseId>
+        <examDate>2023-02-02</examDate>
+        <theoryId>2</theoryId>
+        <practicId>2</practicId>
+    </LicenceRecord>
+    <LicenceRecord>
+        <licenseId>3</licenseId>
+        <examDate>2024-05-02</examDate>
+        <theoryId>3</theoryId>
+        <practicId>1</practicId>
+    </LicenceRecord>
+    <LicenceRecord>
+        <licenseId>4</licenseId>
+        <examDate>2024-05-02</examDate>
+        <theoryId>2</theoryId>
+        <practicId>2</practicId>
+    </LicenceRecord>
+</LicenseRecords>

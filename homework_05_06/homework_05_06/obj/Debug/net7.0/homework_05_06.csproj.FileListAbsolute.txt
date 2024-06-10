@@ -1,0 +1,14 @@
+/Users/marianosa/Desktop/homework_05_06/homework_05_06/bin/Debug/net7.0/homework_05_06
+/Users/marianosa/Desktop/homework_05_06/homework_05_06/bin/Debug/net7.0/homework_05_06.deps.json
+/Users/marianosa/Desktop/homework_05_06/homework_05_06/bin/Debug/net7.0/homework_05_06.runtimeconfig.json
+/Users/marianosa/Desktop/homework_05_06/homework_05_06/bin/Debug/net7.0/homework_05_06.dll
+/Users/marianosa/Desktop/homework_05_06/homework_05_06/bin/Debug/net7.0/homework_05_06.pdb
+/Users/marianosa/Desktop/homework_05_06/homework_05_06/obj/Debug/net7.0/homework_05_06.GeneratedMSBuildEditorConfig.editorconfig
+/Users/marianosa/Desktop/homework_05_06/homework_05_06/obj/Debug/net7.0/homework_05_06.AssemblyInfoInputs.cache
+/Users/marianosa/Desktop/homework_05_06/homework_05_06/obj/Debug/net7.0/homework_05_06.AssemblyInfo.cs
+/Users/marianosa/Desktop/homework_05_06/homework_05_06/obj/Debug/net7.0/homework_05_06.csproj.CoreCompileInputs.cache
+/Users/marianosa/Desktop/homework_05_06/homework_05_06/obj/Debug/net7.0/homework_05_06.dll
+/Users/marianosa/Desktop/homework_05_06/homework_05_06/obj/Debug/net7.0/refint/homework_05_06.dll
+/Users/marianosa/Desktop/homework_05_06/homework_05_06/obj/Debug/net7.0/homework_05_06.pdb
+/Users/marianosa/Desktop/homework_05_06/homework_05_06/obj/Debug/net7.0/homework_05_06.genruntimeconfig.cache
+/Users/marianosa/Desktop/homework_05_06/homework_05_06/obj/Debug/net7.0/ref/homework_05_06.dll

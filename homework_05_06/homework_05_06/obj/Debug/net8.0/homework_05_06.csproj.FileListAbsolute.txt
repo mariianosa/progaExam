@@ -1,0 +1,14 @@
+/Users/danyloyakymets/Projects/dotnet/homework_05_06/homework_05_06/bin/Debug/net8.0/homework_05_06
+/Users/danyloyakymets/Projects/dotnet/homework_05_06/homework_05_06/bin/Debug/net8.0/homework_05_06.deps.json
+/Users/danyloyakymets/Projects/dotnet/homework_05_06/homework_05_06/bin/Debug/net8.0/homework_05_06.runtimeconfig.json
+/Users/danyloyakymets/Projects/dotnet/homework_05_06/homework_05_06/bin/Debug/net8.0/homework_05_06.dll
+/Users/danyloyakymets/Projects/dotnet/homework_05_06/homework_05_06/bin/Debug/net8.0/homework_05_06.pdb
+/Users/danyloyakymets/Projects/dotnet/homework_05_06/homework_05_06/obj/Debug/net8.0/homework_05_06.GeneratedMSBuildEditorConfig.editorconfig
+/Users/danyloyakymets/Projects/dotnet/homework_05_06/homework_05_06/obj/Debug/net8.0/homework_05_06.AssemblyInfoInputs.cache
+/Users/danyloyakymets/Projects/dotnet/homework_05_06/homework_05_06/obj/Debug/net8.0/homework_05_06.AssemblyInfo.cs
+/Users/danyloyakymets/Projects/dotnet/homework_05_06/homework_05_06/obj/Debug/net8.0/homework_05_06.csproj.CoreCompileInputs.cache
+/Users/danyloyakymets/Projects/dotnet/homework_05_06/homework_05_06/obj/Debug/net8.0/homework_05_06.dll
+/Users/danyloyakymets/Projects/dotnet/homework_05_06/homework_05_06/obj/Debug/net8.0/refint/homework_05_06.dll
+/Users/danyloyakymets/Projects/dotnet/homework_05_06/homework_05_06/obj/Debug/net8.0/homework_05_06.pdb
+/Users/danyloyakymets/Projects/dotnet/homework_05_06/homework_05_06/obj/Debug/net8.0/homework_05_06.genruntimeconfig.cache
+/Users/danyloyakymets/Projects/dotnet/homework_05_06/homework_05_06/obj/Debug/net8.0/ref/homework_05_06.dll

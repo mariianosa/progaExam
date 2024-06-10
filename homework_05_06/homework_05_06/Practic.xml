@@ -1,0 +1,17 @@
+<Practics>
+    <Practic>
+    <id>1</id>
+    <autoBrand>Mercedes</autoBrand>
+    <grade>88</grade>
+    </Practic>
+    <Practic>
+        <id>2</id>
+        <autoBrand>BMW</autoBrand>
+        <grade>76</grade>
+    </Practic>
+    <Practic>
+        <id>3</id>
+        <autoBrand>LAZ</autoBrand>
+        <grade>65</grade>
+    </Practic>
+</Practics>

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "qc7gKD9lB6I=",
+  "success": true,
+  "projectFilePath": "/Users/marianosa/Desktop/homework_05_06/homework_05_06/homework_05_06.csproj",
+  "expectedPackageFiles": [
+    "/Users/marianosa/.nuget/packages/microsoft.netcore.app.ref/7.0.20/microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "/Users/marianosa/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.20/microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512",
+    "/Users/marianosa/.nuget/packages/microsoft.netcore.app.host.osx-arm64/7.0.20/microsoft.netcore.app.host.osx-arm64.7.0.20.nupkg.sha512"
+  ],
+  "logs": []
+}

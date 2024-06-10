@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Results>
+  <Result>
+    <driverSurname>Gosling</driverSurname>
+    <category>B</category>
+    <termin>4</termin>
+  </Result>
+  <Result>
+    <driverSurname>Smith</driverSurname>
+    <category>C</category>
+    <termin>7</termin>
+  </Result>
+  <Result>
+    <driverSurname>Urdeichuk</driverSurname>
+    <category>A</category>
+    <termin>2</termin>
+  </Result>
+</Results>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Results>
+  <Result>
+    <category>C</category>
+    <minimumTheoryQuestion>when?</minimumTheoryQuestion>
+    <minimumGrade>70</minimumGrade>
+  </Result>
+  <Result>
+    <category>B</category>
+    <minimumTheoryQuestion>when?</minimumTheoryQuestion>
+    <minimumGrade>70</minimumGrade>
+  </Result>
+  <Result>
+    <category>A</category>
+    <minimumTheoryQuestion>where?</minimumTheoryQuestion>
+    <minimumGrade>89</minimumGrade>
+  </Result>
+</Results>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Results>
+  <Result>
+    <category>B</category>
+    <licenses />
+  </Result>
+  <Result>
+    <category>C</category>
+    <licenses>
+      <license>
+        <driverSurname>kfjgjkkj</driverSurname>
+      </license>
+    </licenses>
+  </Result>
+  <Result>
+    <category>A</category>
+    <licenses>
+      <license>
+        <driverSurname>Urdeichuk</driverSurname>
+      </license>
+    </licenses>
+  </Result>
+</Results>
