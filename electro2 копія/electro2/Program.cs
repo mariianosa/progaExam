@@ -182,8 +182,32 @@ namespace Program
                         new XElement("Earnings", brigade.TopEarner == null ? 0 : brigade.TopEarner.Earnings)
                     )
                 )
-            );
+            )
 
+               //для кожної бригади працівник у якого найбільший заробіток(точно правильно)
+                //var brigadeTopEarners = from brygada in brygadas
+                //                        let brigadeWorkers = workers.Where(w => w.brygadaId == brygada.brygadaId)
+                //                        let brigadeNaryad = naryad.Where(n => brigadeWorkers.Any(w => w.workerId == n.workerId))
+                //                        let brigadeDevices = brigadeNaryad.Join(devices, n => n.deviceId, d => d.deviceId, (n, d) => new { n.workerId, d.devicePrice, n.countEkzemp })
+                //                        let brigadeEarnings = brigadeNaryad.GroupBy(b => b.workerId)
+                //                                .Select(g => new { WorkerId = g.Key, Earnings = g.Sum(x => x.hours * tariffs.FirstOrDefault(t => t.tariffId == workers.First(w => w.workerId == g.Key).tariffId)?.hourlyRate ?? 0) })
+
+
+            //                        let brigadeWorkerEarnings = from worker in brigadeWorkers
+            //                                                    join n in brigadeNaryad on worker.workerId equals n.workerId
+            //                                                    join tariff in tariffs on worker.tariffId equals tariff.tariffId
+            //                                                    let workerEarnings = brigadeEarnings.FirstOrDefault(e => e.WorkerId == worker.workerId)?.Earnings ?? 0
+            //                                                    select new { WorkerId = worker.workerId, Surname = worker.workerSurname, Earnings = workerEarnings, HourlyRate = tariff.hourlyRate }
+            //                        let topWorker = brigadeWorkerEarnings.OrderByDescending(w => w.Earnings).FirstOrDefault()
+            //                        select new
+            //                        {
+            //                            BrigadeName = brygada.brygadaName,
+            //                            TopEarner = new
+            //                            {
+            //                                Surname = topWorker?.Surname,
+            //                                Earnings = topWorker != null ? topWorker.Earnings : 0
+            //                            }
+            //                        };
 
 
 

@@ -1,5 +1,42 @@
 ﻿<Properties StartupConfiguration="{2F273909-AABE-4F30-BD83-9D9B71CF7A5D}|Default">
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.electro2 FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.ItemProperties.electroTest FirstBuild="True" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="electro2/Program.cs">
+    <Files>
+      <File FileName="electro2/Program.cs" Line="187" Column="16" />
+      <File FileName="electroTest/UnitTest1.cs" Line="19" Column="28" />
+      <File FileName="electro2/naryad.xml" Line="17" Column="1" />
+      <File FileName="electro2/naryad2.xml" Line="7" Column="23" />
+      <File FileName="electro2/collections.cs" Line="35" Column="28" />
+      <File FileName="electroTest/Usings.cs" Line="1" Column="1" />
+      <File FileName="electro2/BrigadeDevicesCosts.xml" Line="11" Column="12" />
+      <File FileName="electro2/WorkerEarnigsAndDevices.xml" Line="18" Column="11" />
+      <File FileName="electro2/BrigadeTopEarners.xml" Line="21" Column="31" />
+      <File FileName="electro2/BrigadeEarningsByWorker.xml" Line="9" Column="13" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="electro2" expanded="True">
+            <Node name="electro2" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+            <Node name="electroTest" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="electro2">
+            <Node name="electroTest" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.electro2 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
